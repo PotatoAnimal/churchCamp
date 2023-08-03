@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Kid</title>
+</head>
+<body>
+
+<h2>Edit Kid</h2>
+
+<form th:action="@{/kids/saveKid}" th:object="${kid}" method="post">
+    <input type="hidden" th:field="*{id}">
+    <label>Name:</label>
+    <input type="text" th:field="*{name}"><br>
+    <label>Surname:</label>
+    <input type="text" th:field="*{surname}"><br>
+    <label>Age:</label>
+    <input type="number" th:field="*{age}"><br>
+    <label>Email:</label>
+    <input type="email" th:field="*{email}"><br>
+    <label>Salary:</label>
+    <input type="number" th:field="*{salary}"><br>
+    <label>Class:</label>
+    <input type="text" th:field="*{nameClass}"><br>
+    <button type="submit">Save</button>
+</form>
+
+</body>
+</html>

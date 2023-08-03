@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>All Kids</title>
+</head>
+<body>
+
+<h2>All Kids</h2>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Age</th>
+        <th>Email</th>
+        <th>Salary</th>
+        <th>Class</th>
+        <th>Actions</th>
+    </tr>
+    <tr th:each="kid : ${allKids}">
+        <td th:text="${kid.name}"></td>
+        <td th:text="${kid.surname}"></td>
+        <td th:text="${kid.age}"></td>
+        <td th:text="${kid.email}"></td>
+        <td th:text="${kid.salary}"></td>
+        <td th:text="${kid.nameClass}"></td>
+        <td>
+            <a th:href="@{/kids/updateInfo(kidId=${kid.id})}">Edit</a>
+            <a th:href="@{/kids/deleteKid(kidId=${kid.id})}">Delete</a>
+            <a th:href="@{/kids/viewKid(kidId=${kid.id})}">View</a> <!-- Add this line for the View button -->
+        </td>
+    </tr>
+</table>
+
+<a th:href="@{/kids/addNewKid}">Create New Kid</a>
+
+</body>
+</html>

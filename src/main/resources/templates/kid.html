@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Information</title>
+</head>
+<body>
+
+<h2>Your Information</h2>
+
+<p>
+    Name: <span th:text="${kid.name}"></span><br>
+    Surname: <span th:text="${kid.surname}"></span><br>
+    Age: <span th:text="${kid.age}"></span><br>
+    Email: <span th:text="${kid.email}"></span><br>
+    Salary: <span th:text="${kid.salary}"></span><br>
+    Class: <span th:text="${kid.nameClass}"></span><br>
+</p>
+
+<!-- Edit button using anchor tag -->
+<a th:href="@{/kids/updateInfo(kidId=${kid.id})}">Edit</a>
+
+</body>
+</html>
