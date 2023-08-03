@@ -9,7 +9,7 @@
         <version>2.5.4</version>
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>onlyBounty</artifactId>
+    <artifactId>onlyBounty2.0</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>onlyBounty</name>
     <description>onlyBounty</description>
@@ -24,7 +24,7 @@
 
         <dependency>
             <groupId>com.example</groupId>
-            <artifactId>onlyBounty</artifactId>
+            <artifactId>onlyBounty2.0</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <exclusions>
                 <exclusion>
